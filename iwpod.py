@@ -104,8 +104,3 @@ class iwpod(nn.Module):
         input = self.layer18(input)
         input = self.layer19(input)
         return input
-
-iwpod_net = iwpod(3)
-iwpod_net.to(torch.device("cuda:0" if torch.cuda.is_available() else "cpu"))
-summary(iwpod_net, (3, 224, 224))
-
